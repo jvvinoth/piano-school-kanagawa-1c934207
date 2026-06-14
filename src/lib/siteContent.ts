@@ -39,6 +39,11 @@ export const siteContent = {
       src: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1600&q=80",
       alt: "Piano teacher and student in a welcoming studio in Kanagawa",
     },
+    banner: {
+      src: "https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=1600&q=80",
+      alt: "Professional closeup of piano keyboard",
+      tagline: "A welcoming place to learn piano, at any age.",
+    },
   },
 
   about: {

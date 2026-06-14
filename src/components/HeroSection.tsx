@@ -28,10 +28,30 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-surface/30 pt-20"
+      className="relative min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-surface/30 pt-20"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-32 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      {/* Banner Image with Text Overlay */}
+      <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img
+          src={siteContent.hero.banner.src}
+          alt={siteContent.hero.banner.alt}
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Overlay gradient for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+        
+        {/* Centered Text Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-accent text-center max-w-4xl leading-relaxed hero-tagline-shadow">
+            {siteContent.hero.banner.tagline}
+          </h2>
+        </div>
+      </div>
+
+      {/* Main Hero Content */}
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-32 w-full flex-1 flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
           {/* Left Column - 55% */}
           <div className="lg:col-span-7 space-y-8">
             {/* Badge */}
